@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  root: '.',          // force correct project root
   plugins: [
     tailwindcss(),
     react({
@@ -12,9 +11,6 @@ export default defineConfig({
       },
     }),
   ],
-  base: '/',          // required for Netlify
-  build: {
-    outDir: 'dist',   // force dist at correct level
-    emptyOutDir: true,
-  },
+
+  base: './',
 })
